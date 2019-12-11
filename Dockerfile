@@ -1,10 +1,7 @@
 # using latest version as of 11-12-2019
 FROM jupyter/datascience-notebook:45f07a14b422
 
-
 USER root
-
-
 
 USER jovyan
 
