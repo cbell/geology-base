@@ -8,7 +8,7 @@ Packages that are installed:
 * https://paudetseis.github.io/Telewavesim/
 * https://github.com/trichter/rf
 * https://pyrocko.org/
-* jupyter-matplot-lib
+* https://github.com/matplotlib/jupyter-matplotlib
 
 
 
