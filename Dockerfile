@@ -1,4 +1,6 @@
 # using latest version as of 11-12-2019
+# version description: Major.Minor.Fix
+# version 1.0.7 is resolving the inability to plot interactively 
 FROM jupyter/datascience-notebook:45f07a14b422
 
 
