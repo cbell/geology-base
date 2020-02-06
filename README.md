@@ -1,6 +1,5 @@
 # geology-base
 Base notebook for seismological data analysis. 
-===
 
 Packages that are installed: 
 --- 
