@@ -8,6 +8,7 @@ Packages that are installed:
 * https://github.com/trichter/rf
 * https://pyrocko.org/
 * https://github.com/matplotlib/jupyter-matplotlib
+* https://github.com/lckr/jupyterlab-variableInspector
 
 
 
