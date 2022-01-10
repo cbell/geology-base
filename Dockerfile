@@ -1,24 +1,26 @@
-# using latest version as of 04-07-2020
+# using latest version as of 01-10-2022
 # version description: Major.Minor.Fix
 # version 1.0.7 is resolving the inability to plot interactively 
 # version 2.x.x to be released for research use 
-FROM jupyter/datascience-notebook:76402a27fd13
-# latest as of 6-8-20
+# version 3.0.0 to move security forward and image lifecycle
+FROM jupyter/datascience-notebook:2022-01-10
+# latest as of 01-10-2022 - updates to large number of applications. 
 
 USER root
 
 RUN curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - && \
-    sudo apt-get install -y nodejs
+    sudo apt-get install -y nodejs g++
 
 USER jovyan
 
 RUN conda install obspy basemap 
 RUN pip install telewavesim && \
-    pip install obspyh5 toeplitz rf && \
-    pip install git+https://github.com/SciTools/cartopy.git@5e624fe9e9 && \
-    pip install git+https://git.pyrocko.org/pyrocko/pyrocko.git && \
-    pip install ipympl
+    pip install obspyh5 toeplitz rf 
+RUN pip install cartopy
 
-RUN jupyter labextension install jupyter-matplotlib && \
-    jupyter labextension install @lckr/jupyterlab_variableinspector
+RUN pip install pyrocko && \
+    pip install ipympl
+RUN pip install lckr-jupyterlab-variableinspector
+
+RUN jupyter labextension install jupyter-matplotlib
 
