@@ -5,6 +5,7 @@
 # version 3.0.0 to move security forward and image lifecycle
 # version 3.0.1 to add geopandas
 # version 3.0.2 to fix issue with matplot crashing the kernel 
+# version 3.1.0 to add seispy
 
 FROM jupyter/datascience-notebook:2022-01-10
 # latest as of 01-10-2022 - updates to large number of applications. 
@@ -25,6 +26,4 @@ RUN pip install pyrocko && \
     pip install ipympl
 RUN pip install lckr-jupyterlab-variableinspector
 
-RUN pip install geopandas
-
-
+RUN pip install geopandas python-seispy
